@@ -8,5 +8,5 @@ We used this functions to create the song Subwoofer Lullaby from Minecraft
 
 The three matlab files employed are:
 - play_note.m
-- Subwoofer_Lullabym
+- Subwoofer_Lullaby.m
 - DFSmodified.m

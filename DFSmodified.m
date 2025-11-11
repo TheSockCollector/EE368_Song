@@ -55,7 +55,7 @@ x_samples=x_samples(env_start_index:env_end_index);
 % Normalize the DFS magnitude spectrum peak to Ckmax=1.0  ( X[k]max=0.5 )
 DFSx = 0.5.*DFSx./max(abs(DFSx));
 
-Harmonic_index_spacing = f0exact/Fs*length(abs(DFSx))
+Harmonic_index_spacing = f0exact/Fs*length(abs(DFSx));
 Harmonic_indices=round((1:floor(Fs/2/f0exact)).*Harmonic_index_spacing);
 Harmonic_indices = 1 + Harmonic_indices;
 ExpFS=fftshift(DFSx).';
@@ -75,11 +75,11 @@ for ii=1:length(Harmonic_indices),
 Harmonic_indices= Hind(2:length(Hind));
 
 HarmonicSeries=ExpFS(Harmonic_indices);
-Ck= 2.*abs(HarmonicSeries(1:min([50,length(HarmonicSeries)])))
-Thetak= angle(HarmonicSeries(1:min([50,length(HarmonicSeries)])))
+Ck= 2.*abs(HarmonicSeries(1:min([50,length(HarmonicSeries)])));
+Thetak= angle(HarmonicSeries(1:min([50,length(HarmonicSeries)])));
 return;
 
-function [exact_periods_samples,f0exact] = TruncateToExactPeriods(x_samples,Fs)
+function [exact_periods_samples,f0exact] = TruncateToExactPeriods(x_samples,Fs);
 
 % Iterate 3 times
 for iteration=1:3,

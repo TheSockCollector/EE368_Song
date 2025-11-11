@@ -16,6 +16,8 @@ for harmonics = 1:1:numel(Ck)
    waveform = waveform + ((Ck(harmonics) / harmonics)*myCos(frequency*harmonics/2, Thetak(harmonics), duration, Fs));
 end
 
+% waveform = myCos(frequency, 0, duration, 44100) + 0.6*myCos(frequency/2, 0, duration, 44100) + 0.3*myCos(frequency/4, 0, duration, 44100);
+
 % Envelope
 N  = numel(waveform);
 t  = (0:N-1)/Fs;

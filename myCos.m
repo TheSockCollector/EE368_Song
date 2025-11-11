@@ -13,6 +13,6 @@ waveform = cos(2*pi*frequency*t+phase); % declaring the cosine
 % xlim([0 duration])
 % ylabel('Amplitude')
 % title('cosine wave','FontWeight','bold')
-% %plot(t, waveform);
+%plot(t, waveform);
 
 end
