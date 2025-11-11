@@ -1,4 +1,4 @@
-function waveform = midi(number, duration)
+function waveform = play_note(number, duration)
 frequency = (440*2^((number-69)/12)); % conversion from MIDI number to frequency
 
 persistent Fs_cache Ck_cache Th_cache               % Calculate the Fs, Ck, Thetak values for the elecpiano only once
@@ -13,7 +13,7 @@ persistent Fs_cache Ck_cache Th_cache               % Calculate the Fs, Ck, Thet
     waveform  = zeros(size(y0));                 % initialize to zeros, right length
 
 for harmonics = 1:min(1, numel(Ck))
-   waveform = waveform + (Ck(harmonics) / harmonics)*myCos(frequency*harmonics, Thetak(harmonics), duration, Fs);
+   waveform = waveform + (Ck(harmonics) / 3*harmonics)*myCos(frequency*harmonics, Thetak(harmonics), duration, Fs);
 end
 
 % Envelope

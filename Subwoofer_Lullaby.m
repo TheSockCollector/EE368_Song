@@ -1,46 +1,46 @@
-%% Subwoofer Lulluby
-
-%% notes
+%% Subwoofer Lullaby - Minecraft
+% Program written by Luke Oliver, Paul Montgomery, and Samuel Weston
+%% Midi notes
 count = 0.875;
 half = (count/2);
 
-a3 = midi(57, count);
-f3 = midi(53, count);
-g3 = midi(55, count);
-a4 = midi(69, count);
-c4 = midi(60, count);
-b4 = midi(71, count);
-f4 = midi(65, count);
-g4 = midi(67, count);
-a5 = midi(81, count);
-b5 = midi(83, count);
-c5 = midi(72, count);
-d5 = midi(74, count);
-e5 = midi(76, count);
-g5 = midi(79, count);
-e6 = midi(88, count);
-g6 = midi(91, count);
-a6 = midi(93, count);
-d6 = midi(86, count);
-f6 = midi(89, count);
-c6 = midi(84, count);
+a3 = play_note(57, count);
+f3 = play_note(53, count);
+g3 = play_note(55, count);
+a4 = play_note(69, count);
+c4 = play_note(60, count);
+b4 = play_note(71, count);
+f4 = play_note(65, count);
+g4 = play_note(67, count);
+a5 = play_note(81, count);
+b5 = play_note(83, count);
+c5 = play_note(72, count);
+d5 = play_note(74, count);
+e5 = play_note(76, count);
+g5 = play_note(79, count);
+e6 = play_note(88, count);
+g6 = play_note(91, count);
+a6 = play_note(93, count);
+d6 = play_note(86, count);
+f6 = play_note(89, count);
+c6 = play_note(84, count);
 
-a5s = midi(81, half);
-b5s = midi(83, half);
-e5s = midi(76, half);
-f5s = midi(77, half);
-c6s = midi(84, half);
-d6s = midi(86, half);
-e6s = midi(88, half);
-f6s = midi(89, half);
+a5s = play_note(81, half);
+b5s = play_note(83, half);
+e5s = play_note(76, half);
+f5s = play_note(77, half);
+c6s = play_note(84, half);
+d6s = play_note(86, half);
+e6s = play_note(88, half);
+f6s = play_note(89, half);
 
-c6l = midi(84, count*2);
-e6l = midi(88, count*1.5);
-d6l = midi(86, count*2);
-g6l = midi(91, count*2.5);
-b5l = midi(83, count*2.5);
-e5l = midi(76, count*2.5);
-b4l = midi(71, count*2.5);
+c6l = play_note(84, count*2);
+e6l = play_note(88, count*1.5);
+d6l = play_note(86, count*2);
+g6l = play_note(91, count*2.5);
+b5l = play_note(83, count*2.5);
+e5l = play_note(76, count*2.5);
+b4l = play_note(71, count*2.5);
 
 fs = 44100;
 bits = 24;
@@ -56,7 +56,7 @@ pause(count);
 sound(g5, fs, bits)
 pause(count);
 
-%start of 4th bar (on MIDI chart)
+%start of 4th bar (on play_note chart)
 sound(e5, fs, bits)
 sound(b5, fs, bits)
 pause(count);
@@ -440,8 +440,6 @@ sound(b5l, fs, bits)
 sound(e5l, fs, bits)
 sound(b4l, fs, bits)
 
-
-
-
-% I used https://onlinesequencer.net/1187399 and https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.phys.unsw.edu.au%2Fjw%2Fgraphics%2Fnotes.GIF&f=1&nofb=1&ipt=31d5228003e6dcd2c39359fb15ee3350ba1863989583ae9891423135d3fb4913
+% I used https://onlinesequencer.net/1187399 and 
+% https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.phys.unsw.edu.au%2Fjw%2Fgraphics%2Fnotes.GIF&f=1&nofb=1&ipt=31d5228003e6dcd2c39359fb15ee3350ba1863989583ae9891423135d3fb4913
 % ^^ for the mapping and conversion.
